@@ -4,8 +4,8 @@
 // Find them in: Supabase Dashboard > Project Settings > API
 // ============================================================
 window.APP_CONFIG = {
-  SUPABASE_URL: 'https://YOUR-PROJECT-REF.supabase.co',
-  SUPABASE_ANON_KEY: 'YOUR-ANON-PUBLIC-KEY',
+  SUPABASE_URL: 'https://svjestjcyeqnneqskbgy.supabase.co',
+  SUPABASE_ANON_KEY: 'sb_publishable_jJuHHenv7V2JZ4JVf5U_Bw_OUXfwTA0',
 
   // Storage bucket for product/category/brand images
   IMAGE_BUCKET: 'product-images',
