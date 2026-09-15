@@ -1,32 +1,27 @@
 :root {
   /* ---- Brand palette ---- */
-  --color-olive: #818263;
-  --color-sage: #C2C395;
-  --color-rose: #DDBAAE;
-  --color-blush: #EFD7CF;
-  --color-taupe: #DCD4C1;
-  --color-sand: #F6EAD4;
-  --color-cream: #FFFAF2;
+  --color-primary: #171717;
+  --color-secondary: #404040;
+  --color-accent: #A16207;
+  --color-accent-light: #D4AF37;
 
   /* ---- Supporting colors ---- */
-  --color-success: #4A7C59;
-  --color-danger: #C0392B;
-  --color-warning: #E67E22;
-  --color-ink: #2C3E50;
-  --color-white: #FFFFFF;
+  --color-success: #059669;
+  --color-danger: #DC2626;
+  --color-warning: #D97706;
 
   /* ---- Semantic aliases ---- */
-  --bg-page: var(--color-cream);
-  --bg-alt: var(--color-sand);
-  --bg-footer: var(--color-taupe);
-  --text-primary: var(--color-ink);
-  --text-muted: #7A7E6E;
-  --text-on-dark: var(--color-cream);
-  --border-color: #E4DCC8;
+  --bg-page: #FFFFFF;
+  --bg-alt: #F8F9FA;
+  --bg-footer: #171717;
+  --text-primary: #171717;
+  --text-muted: #6B7280;
+  --text-on-dark: #FFFFFF;
+  --border-color: #E5E5E5;
 
   /* ---- Typography ---- */
-  --font-display: 'Vazirmatn', 'Yekan Bakh', Tahoma, sans-serif;
-  --font-body: 'Vazirmatn', Tahoma, sans-serif;
+  --font-display: 'Outfit', 'Vazirmatn', 'Yekan Bakh', Tahoma, sans-serif;
+  --font-body: 'Work Sans', 'Vazirmatn', Tahoma, sans-serif;
 
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
@@ -37,7 +32,7 @@
   --fs-2xl: 2.25rem;
   --fs-3xl: 3rem;
 
-  /* ---- Spacing scale (4px base) ---- */
+  /* ---- Spacing scale (8px base) ---- */
   --sp-1: 4px;
   --sp-2: 8px;
   --sp-3: 12px;
@@ -49,18 +44,20 @@
   --sp-9: 96px;
 
   /* ---- Radius / shadow ---- */
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 22px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
   --radius-pill: 999px;
-  --shadow-card: 0 2px 14px rgba(44, 62, 80, 0.06);
-  --shadow-modal: 0 12px 40px rgba(44, 62, 80, 0.22);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-modal: 0 16px 48px rgba(0, 0, 0, 0.12);
 
   /* ---- Layout ---- */
-  --container-max: 1180px;
-  --nav-height: 68px;
+  --container-max: 1200px;
+  --nav-height: 64px;
   --admin-sidebar-width: 240px;
-  --admin-tabbar-height: 64px;
+  --admin-tabbar-height: 60px;
 
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 150ms var(--ease-standard);
+  --transition-normal: 250ms var(--ease-standard);
 }

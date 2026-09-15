@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>پنل مدیریت | دلسانا شاپ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/components.css">
@@ -12,7 +14,9 @@
 <body class="admin-body">
 
 <div id="app-root">
-  <div class="auth-loading"><div class="spinner" style="width:32px;height:32px;"></div></div>
+  <div class="auth-loading" role="status">
+    <div class="spinner" style="width:24px;height:24px;" aria-label="در حال بارگذاری"></div>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>

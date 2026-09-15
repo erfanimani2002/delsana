@@ -38,7 +38,7 @@
     appRoot.innerHTML = `
       <div class="admin-shell">
         <aside class="admin-sidebar">
-          <div class="admin-sidebar__logo">دلسانا شاپ</div>
+          <div class="admin-sidebar__logo"><img src="../img/logo.jpg" alt="دلسانا شاپ"></div>
           <nav class="admin-nav" id="admin-nav">
             ${navOrder.map((path) => `<a href="#${path}" data-path="${path}">${icon(routes[path].icon)}<span>${routes[path].label}</span></a>`).join('')}
           </nav>
@@ -89,7 +89,7 @@
     appRoot.innerHTML = `
       <div class="login-screen">
         <div class="card login-card">
-          <div class="logo">دلسانا شاپ</div>
+          <div class="logo"><img src="../img/logo.jpg" alt="دلسانا شاپ"></div>
           <div class="subtitle">ورود به پنل مدیریت</div>
           <div class="login-error" id="login-error"></div>
           <form id="login-form">

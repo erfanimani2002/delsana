@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -22,25 +23,32 @@ body {
   background: var(--bg-page);
   color: var(--text-primary);
   font-size: var(--fs-base);
-  line-height: 1.7;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img { max-width: 100%; display: block; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  margin: 0 0 var(--sp-3);
-  line-height: 1.35;
-  font-weight: 700;
+  margin: 0 0 var(--sp-4);
+  line-height: 1.25;
+  font-weight: 600;
   color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
-h1 { font-size: var(--fs-3xl); }
-h2 { font-size: var(--fs-2xl); }
+h1 { font-size: clamp(2rem, 5vw, var(--fs-3xl)); }
+h2 { font-size: clamp(1.5rem, 3vw, var(--fs-2xl)); }
 h3 { font-size: var(--fs-lg); }
+h4 { font-size: var(--fs-md); }
 
-p { margin: 0 0 var(--sp-3); color: var(--text-primary); }
+p {
+  margin: 0 0 var(--sp-4);
+  color: var(--text-muted);
+  line-height: 1.7;
+}
 
 a { color: inherit; text-decoration: none; }
 
@@ -75,15 +83,49 @@ ul, ol { padding-inline-start: var(--sp-5); }
 
 /* Visible keyboard focus everywhere */
 :focus-visible {
-  outline: 2px solid var(--color-olive);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
-  border-radius: 4px;
 }
 
 ::selection {
-  background: var(--color-rose);
-  color: var(--color-ink);
+  background: var(--color-accent-light);
+  color: var(--color-primary);
 }
 
 /* number formatting should stay LTR even in an RTL doc */
 .ltr-nums { unicode-bidi: plaintext; direction: ltr; display: inline-block; }
+
+/* Smooth transitions for interactive elements */
+a, button, input, select, textarea {
+  transition: color var(--transition-fast),
+              background-color var(--transition-fast),
+              border-color var(--transition-fast),
+              box-shadow var(--transition-fast),
+              opacity var(--transition-fast);
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .hide-mobile { display: none !important; }
+}
+@media (min-width: 641px) {
+  .show-mobile-only { display: none !important; }
+}
+
+/* Touch target sizing for mobile */
+@media (pointer: coarse) {
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar, .admin-tabbar, .site-footer, .skip-link {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}
