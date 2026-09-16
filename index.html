@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>دلسانا شاپ | فروشگاه لوازم آرایشی</title>
 <meta name="description" content="فروشگاه آنلاین لوازم آرایشی و بهداشتی دلسانا شاپ">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
@@ -45,7 +43,20 @@
 </div>
 
 <nav id="mobile-menu" class="mobile-menu" aria-label="منوی اصلی">
-  <!-- simple in-page anchor links; expand with JS class "open" if desired -->
+  <div class="mobile-menu__header">
+    <span class="mobile-menu__title">منو</span>
+    <button class="mobile-menu__close" id="menu-close" aria-label="بستن منو">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu__links">
+    <a href="#main-content" class="mobile-menu__link">صفحه اصلی</a>
+    <a href="#categories" class="mobile-menu__link">دسته‌بندی‌ها</a>
+    <a href="#products" class="mobile-menu__link">محصولات</a>
+    <a href="#how-to-order" class="mobile-menu__link">نحوه سفارش</a>
+    <a href="#footer" class="mobile-menu__link">درباره ما</a>
+    <a href="#" class="mobile-menu__link" data-instagram-link target="_blank" rel="noopener">اینستاگرام</a>
+  </div>
 </nav>
 
 <main id="main-content">
@@ -78,7 +89,7 @@
   </section>
 
   <!-- ============ Categories ============ -->
-  <section class="section section--sand">
+  <section class="section section--sand" id="categories">
     <div class="container">
       <div class="section__head"><h2>دسته‌بندی‌ها</h2></div>
       <div class="category-scroll" id="category-scroll" role="list"></div>
@@ -112,7 +123,7 @@
   </section>
 
   <!-- ============ How to order ============ -->
-  <section class="section section--sand">
+  <section class="section section--sand" id="how-to-order">
     <div class="container content-block">
       <h2 data-content-title="how_to_order">نحوه سفارش</h2>
       <p class="body-text" data-content-body="how_to_order"></p>

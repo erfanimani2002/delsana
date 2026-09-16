@@ -131,12 +131,27 @@
   // ---------- Mobile nav menu ----------
   const menuBtn = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
+  const menuCloseBtn = document.getElementById('menu-close');
+
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }
+
   if (menuBtn) {
     menuBtn.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', String(isOpen));
     });
   }
+
+  if (menuCloseBtn) {
+    menuCloseBtn.addEventListener('click', closeMenu);
+  }
+
+  mobileMenu.querySelectorAll('.mobile-menu__link').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
 
   // ---------- Init ----------
   await Promise.all([loadSettings(), loadContent()]);
